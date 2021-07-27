@@ -1,27 +1,38 @@
 const contactList = [] //store your contacts as objects
 
-function getInfo() {
-    let inputn = `<div class = "name" contenteditable = "true"></div>`;
-    let inputp = `<div class = "phone" contenteditable = "true"></div>`;
-    let inpute = `<div class = "email" contenteditable = "true"></div>`;
-    let contact = `<li>name: ${inputn} <br> phone: ${inputp} <br> email: ${inpute}</li>`;
-    const contactArray = {name: inputn, phone: inputp, email: inpute}
-    return contactArray, contact
-}
-
-
-function addArray(contact){
+function addArray(array){
     contactList.push(contactArray);
     return contactList
 }
+//add array to list PART 1
 
+function getInputs() {
+    let inputn = `<div class = "name" contenteditable = "true"></div>`;
+    let inputp = `<div class = "phone" contenteditable = "true"></div>`;
+    let inpute = `<div class = "email" contenteditable = "true"></div>`;
+    const inputs = inputn, inputp, inpute;
+    return inputs
+}
+//get inputs via editable html
+
+function makeArray(input) {
+    let contactArray = {name: inputn, phone: inputp, email: inpute}
+    return contactArray
+}
+//put inputs into array
+
+function insertLiterals(){
+    let contact = `<li>name: ${inputn} <br> phone: ${inputp} <br> email: ${inpute}</li>`;
+    return contact
+}
+//change html
 
 function newContact(){
-    const addContact = document.querySelector("#contact-list");
-    addContact.addEventListener("click", addArray(getInfo()));
+    const addContact = document.querySelector("#new-contact-btn");
+    addContact.addEventListener("click", addArray(getInputs(makeArray(AAAAAAAAAAAA?))));
     return contactList
 }
-
+//put array into array PART 2
 
 //click new contact (event, storage). open up contact template (editable, separate, storage (literals?)). prompt for name, phone, email. store as array, push to contactList (AAAAAAAAAA).
 
