@@ -47,6 +47,10 @@ function saveContact(input) {
 }
 //save
 
+//click new contact (event, storage). open up contact template (editable, separate, storage (literals)). prompt for name, phone, email. store as array, push to contactList (AAAAAAAAAA).
+
+//sidebar - bubbling! open up contact info with edit and delete button. (generate html)
+
 function editContact(){
 
 }
@@ -68,8 +72,6 @@ function deleteContact(list){
 const deleteContactVAR = document.querySelector("#")
 deleteContactVAR.addEventListener("click", deleteContact(contactList))
 //calling functions electric boogaloo
-
-//click new contact (event, storage). open up contact template (editable, separate, storage (literals?)). prompt for name, phone, email. store as array, push to contactList (AAAAAAAAAA).
 
 //Clicking on the 'New Contact' button should open the view to create a contact. 
 //For now you just need the following info: name, phone, email
