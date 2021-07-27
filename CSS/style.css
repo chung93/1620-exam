@@ -17,6 +17,25 @@ body {
   background-color: #FAF8F0;
 }
 
+    <header>
+      <h1>Contacts</h1>
+      <nav class="header-nav">
+        <ul>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <nav class="side">
+      <h2>contacts</h2>
+      <ul id="contact-list"></ul>
+    </nav>
+    <main>
+      <button id="new-contact-btn">New Contact</button>
+      <div id="new-contact"></div>
+      <div id="display-contact"></div>
+    </main>
+
 .container {
   display: grid;
   
