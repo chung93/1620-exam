@@ -1,22 +1,27 @@
 const contactList = [] //store your contacts as objects
 
 function getInfo() {
-    let contact = {}
-    
-    //event, card, etc?????
-    return contact
+    let inputn = `<div class = "name" contenteditable = "true"></div>`;
+    let inputp = `<div class = "phone" contenteditable = "true"></div>`;
+    let inpute = `<div class = "email" contenteditable = "true"></div>`;
+    let contact = `<li>name: ${inputn} <br> phone: ${inputp} <br> email: ${inpute}</li>`;
+    const contactArray = {name: inputn, phone: inputp, email: inpute}
+    return contactArray, contact
 }
+
 
 function addArray(contact){
-    contactList.push(contact)
+    contactList.push(contactArray);
     return contactList
 }
 
+
 function newContact(){
-    const addContact = document.querySelector("#contact-list")
-    addContact.addEventListener("click", addArray(getInfo()))
+    const addContact = document.querySelector("#contact-list");
+    addContact.addEventListener("click", addArray(getInfo()));
     return contactList
 }
+
 
 //click new contact (event, storage). open up contact template (editable, separate, storage (literals?)). prompt for name, phone, email. store as array, push to contactList (AAAAAAAAAA).
 
