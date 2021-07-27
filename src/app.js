@@ -10,29 +10,64 @@ function getInputs() {
     let inputn = `<div class = "name" contenteditable = "true"></div>`;
     let inputp = `<div class = "phone" contenteditable = "true"></div>`;
     let inpute = `<div class = "email" contenteditable = "true"></div>`;
-    const inputs = inputn, inputp, inpute;
+    const inputs = (inputn, inputp, inpute);
     return inputs
 }
 //get inputs via editable html
 
-function makeArray(input) {
+function makeArray(info) {
     let contactArray = {name: inputn, phone: inputp, email: inpute}
     return contactArray
 }
 //put inputs into array
 
-function insertLiterals(){
+function insertLiterals(literals){
     let contact = `<li>name: ${inputn} <br> phone: ${inputp} <br> email: ${inpute}</li>`;
     return contact
 }
-//change html
 
-function newContact(){
-    const addContact = document.querySelector("#new-contact-btn");
-    addContact.addEventListener("click", addArray(getInputs(makeArray(AAAAAAAAAAAA?))));
+const addLiterals = document.querySelector("#contact-list");
+addLiterals.insertAdjacentHTML(beforeend, insertLiterals(inputs));
+//innerHTML?
+
+function addContact(){
+    addArray(makeArray(getInputs()))
     return contactList
 }
-//put array into array PART 2
+//put array into array PART 2 (calling functions) WAIT BUT WHAT CALLS THIS THEN
+
+const addContactVAR = document.querySelector("#new-contact-btn");
+addContactVAR.addEventListener("click", addContact());
+//let us pray
+
+function saveContact(input) {
+    const saveContact = document.querySelector("#");
+    saveContact.addEventListener("click", insertLiterals);
+    return saveContact
+}
+//save
+
+function editContact(){
+
+}
+
+function genEdit(){
+    const
+}
+
+function genDelete(){
+    const deleteBTN = `<`
+}
+
+function deleteContact(list){
+    contactList.pop(currentTarget)
+    return contactList
+}
+//should I make that inner variable more vague???? man.
+
+const deleteContactVAR = document.querySelector("#")
+deleteContactVAR.addEventListener("click", deleteContact(contactList))
+//calling functions electric boogaloo
 
 //click new contact (event, storage). open up contact template (editable, separate, storage (literals?)). prompt for name, phone, email. store as array, push to contactList (AAAAAAAAAA).
 
